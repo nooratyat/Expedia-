@@ -1,9 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+	<title>offers Data</title>
+	<script src="lib/angular.js"></script>
+  <script src="lib/angular-route.js"></script>
+  <script src="app.js"></script>
+  <header style="background-color:blue; color:white; height:15%" align='center'><h1>Expedia </h1> </header>
 </head>
-<body>
-	
+<body ng-app="myApp">
+ <div ng-controller="Data" >
+   <div ng-repeat="data in allData" >
+     <div  ng-repeat="hotel in data" >
+      
+         <h1>{{hotel.hotelCity}}</h1>
+         <h3>{{hotel.hotelName}}</h3>
+         <h3>{{hotel.hotelDestination}}</h3>
+         <h6>{{hotel.hotelStreetAddress}}</h6>
+         <img  width="400px" hight="300px" ng-src={{hotel.hotelImageUrl}}  />
+         <p>{{hotel.description}}</p>
+      </div>
+      </div>
+    </div>
+</div>
 </body>
 </html>
+
+
+
+
