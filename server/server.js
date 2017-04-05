@@ -10,7 +10,7 @@ require('./config/routes.js')(app, express);
 
 
 	var port = 3000;
-	app.listen(port , function () {
+	app.listen(port ||process.env.PORT, function () {
 		console.log('...Server now listening on port ' + port);
 	});
 
